@@ -1,4 +1,4 @@
-======================
+
 QQ空间相册图片外链工具
 ======================
 
@@ -14,11 +14,15 @@ QQ空间相册图片外链工具
 
 **演示:**
 
-`https://www.yge.me <https://www.yge.me>`_
+[https://www.yge.me][1]
 
 所有前台看到的图片都是使用这个工具
 
 
 **下载(因为手头没有MAC系统只编译了windows版):**
 
-`https://github.com/xunni1000/Qzone-Photo-Outside/releases <https://github.com/xunni1000/Qzone-Photo-Outside/releases>`_
+[https://github.com/xunni1000/Qzone-Photo-Outside/releases][2]
+
+
+  [1]: https://www.yge.me
+  [2]: https://github.com/xunni1000/Qzone-Photo-Outside/releases
