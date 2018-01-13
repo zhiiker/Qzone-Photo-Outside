@@ -1,3 +1,10 @@
+{
+
+    Author: Y.A.K.E
+    License : MIT
+    Date : 2018/01/13
+
+}
 unit Donate;
 
 interface

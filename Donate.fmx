@@ -13,7 +13,7 @@ object Donate_Form: TDonate_Form
     Position.Point = '(8,40)'
     Width = 600.000000000000000000
     Height = 600.000000000000000000
-    TabOrder = 1
+    TabOrder = 0
     Bitmap.PNG = {
       89504E470D0A1A0A0000000D494844520000048000000480080600000087A836
       5A000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
@@ -4925,7 +4925,7 @@ object Donate_Form: TDonate_Form
     Width = 600.000000000000000000
     Height = 600.000000000000000000
     Visible = False
-    TabOrder = 10
+    TabOrder = 1
     Bitmap.PNG = {
       89504E470D0A1A0A0000000D494844520000012D0000012D08060000005DE336
       EE000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
@@ -5394,7 +5394,7 @@ object Donate_Form: TDonate_Form
     Position.Point = '(240,8)'
     Width = 65.000000000000000000
     Height = 19.000000000000000000
-    TabOrder = 11
+    TabOrder = 2
     IsChecked = True
     Font.Size = 15.000000000000000000
     Font.Style = [fsBold]
@@ -5404,7 +5404,7 @@ object Donate_Form: TDonate_Form
     Position.Point = '(312,8)'
     Width = 81.000000000000000000
     Height = 19.000000000000000000
-    TabOrder = 12
+    TabOrder = 3
     Font.Size = 15.000000000000000000
     Font.Style = [fsBold]
     Text = #25903#20184#23453
