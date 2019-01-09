@@ -12,15 +12,26 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.Edit, FMX.Layouts,
-  FMX.Memo,System.RegularExpressions, FMX.Objects,
+  FMX.Memo,System.RegularExpressions, FMX.Objects, FMX.StdCtrls, FMX.ScrollBox, FMX.Controls.Presentation,
 {$IFDEF MSWINDOWS}
-  Winapi.ShellAPI, Winapi.Windows, FMX.ExtCtrls;
+  Winapi.ShellAPI, Winapi.Windows,
 {$ENDIF MSWINDOWS}
-{$IFDEF POSIX}
-  Posix.Stdlib;
+ {$IFDEF POSIX}
+  Posix.SysTypes,
+  Posix.Stdlib,
+  Posix.UniStd,
+  Posix.Signal,
+{$IFDEF MACOS}
+  Macapi.CoreServices,
+{$ENDIF MACOS}
+{$IFDEF ANDROID}
+  Posix.Fcntl,
+{$ENDIF ANDROID}
+{$IFDEF LINUX}
+  System.SyncObjs,
+{$ENDIF LINUX}
 {$ENDIF POSIX}
-
-
+  FMX.ExtCtrls;
 
 
 type
@@ -251,13 +262,28 @@ end;
 procedure TMain_Form.Text2Click(Sender: TObject);
 const
 sCommand = 'https://www.yge.me/';
+
+var
+lCommand :Char;
 begin
 
 {$IFDEF MSWINDOWS}
   ShellExecute(0, 'OPEN', PChar(sCommand), '', '', SW_SHOWNORMAL);
 {$ENDIF MSWINDOWS}
-{$IFDEF POSIX}
+
+
+
+ {$IFDEF POSIX}
+
+{$IFDEF MACOS}
   _system(PAnsiChar('open ' + AnsiString(sCommand)));
+{$ENDIF MACOS}
+{$IFDEF ANDROID}
+
+{$ENDIF ANDROID}
+{$IFDEF LINUX}
+  _system('firefox ' + sCommand);
+{$ENDIF LINUX}
 {$ENDIF POSIX}
 
 end;
