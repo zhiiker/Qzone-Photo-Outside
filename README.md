@@ -20,7 +20,7 @@ QQ空间相册图片外链工具
 所有前台看到的图片都是使用这个工具
 
 
-**下载(因为手头没有MAC系统只编译了windows版和linux):**
+**下载(包含MAC/LINUX/WINDOWS):**
 
 [https://github.com/xunni1000/Qzone-Photo-Outside/releases][2]
 
