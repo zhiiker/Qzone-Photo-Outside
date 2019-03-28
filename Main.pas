@@ -276,7 +276,7 @@ begin
  {$IFDEF POSIX}
 
 {$IFDEF MACOS}
-  _system(PAnsiChar('open ' + AnsiString(sCommand)));
+  _system(PAnsiChar('open -a Safari ' + AnsiString(sCommand)));
 {$ENDIF MACOS}
 {$IFDEF ANDROID}
 

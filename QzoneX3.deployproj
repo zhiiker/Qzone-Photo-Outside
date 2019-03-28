@@ -3,16 +3,18 @@
     <ProjectExtensions>
         <ProjectFileVersion>12</ProjectFileVersion>
     </ProjectExtensions>
-    <PropertyGroup>
-        <DeviceId Condition="'$(Platform)'=='Android'"/>
-        <DeviceId Condition="'$(Platform)'=='iOSDevice32'"/>
-        <DeviceId Condition="'$(Platform)'=='iOSSimulator'"/>
-    </PropertyGroup>
-    <ItemGroup Condition="'$(Platform)'=='iOSDevice64'"/>
-    <ItemGroup Condition="'$(Platform)'=='Win64'"/>
-    <ItemGroup Condition="'$(Platform)'=='iOSDevice32'"/>
+    <PropertyGroup/>
     <ItemGroup Condition="'$(Platform)'=='Win32'"/>
     <ItemGroup Condition="'$(Platform)'=='Linux64'">
+        <DeployFile Include="$(fmxlinux)\Redist\libfmux.so">
+            <RemoteDir>QzoneX3\</RemoteDir>
+            <RemoteName>libfmux.so</RemoteName>
+            <DeployClass/>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="Linux64\Release\QzoneX3" Condition="'$(Config)'=='Release'">
             <RemoteDir>QzoneX3\</RemoteDir>
             <RemoteName>QzoneX3</RemoteName>
@@ -22,15 +24,6 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
             <Required>True</Required>
-        </DeployFile>
-        <DeployFile Include="$(fmxlinux)\Redist\libfmux.so">
-            <RemoteDir>QzoneX3\</RemoteDir>
-            <RemoteName>libfmux.so</RemoteName>
-            <DeployClass/>
-            <Operation>0</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
         </DeployFile>
     </ItemGroup>
     <ItemGroup Condition="'$(Platform)'=='OSX32'">
@@ -43,6 +36,25 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="OSX32\Release\QzoneX3.info.plist" Condition="'$(Config)'=='Release'">
+            <RemoteDir>QzoneX3.app\Contents\</RemoteDir>
+            <RemoteName>Info.plist</RemoteName>
+            <DeployClass>ProjectOSXInfoPList</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="OSX32\Release\QzoneX3" Condition="'$(Config)'=='Release'">
+            <RemoteDir>QzoneX3.app\Contents\MacOS\</RemoteDir>
+            <RemoteName>QzoneX3</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
         <DeployFile Include="$(BDS)\Redist\osx32\libcgsqlite3.dylib">
             <RemoteDir>QzoneX3.app\Contents\MacOS\</RemoteDir>
             <RemoteName>libcgsqlite3.dylib</RemoteName>
@@ -52,26 +64,24 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-    </ItemGroup>
-    <ItemGroup Condition="'$(Platform)'=='Android'"/>
-    <ItemGroup Condition="'$(Platform)'=='iOSSimulator'">
-        <DeployFile Include="$(BDS)\Redist\iossimulator\libcgunwind.1.0.dylib">
-            <RemoteDir>QzoneX3.app\</RemoteDir>
-            <RemoteName>libcgunwind.1.0.dylib</RemoteName>
-            <DeployClass>DependencyModule</DeployClass>
+        <DeployFile Include="OSX32\Release\QzoneX3.entitlements" Condition="'$(Config)'=='Release'">
+            <RemoteDir>QzoneX3.app\..\</RemoteDir>
+            <RemoteName>QzoneX3.entitlements</RemoteName>
+            <DeployClass>ProjectOSXEntitlements</DeployClass>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="$(BDS)\Redist\iossimulator\libPCRE.dylib">
-            <RemoteDir>QzoneX3.app\</RemoteDir>
-            <RemoteName>libPCRE.dylib</RemoteName>
-            <DeployClass>DependencyModule</DeployClass>
+        <DeployFile Include="$(BDS)\bin\delphi_PROJECTICNS.icns" Condition="'$(Config)'=='Release'">
+            <RemoteDir>QzoneX3.app\Contents\Resources\</RemoteDir>
+            <RemoteName>QzoneX3.icns</RemoteName>
+            <DeployClass>ProjectOSXResource</DeployClass>
             <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
     </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='Win64'"/>
 </Project>
