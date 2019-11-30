@@ -25,5 +25,20 @@ QQ空间相册图片外链工具
 [https://github.com/xunni1000/Qzone-Photo-Outside/releases][2]
 
 
+----------
+ 
+ 
+**如果不喜欢客户端版本**
+ 
+ 
+还有GM脚本版,理论上支持firefox 和 chrome系
+
+[https://github.com/xunni1000/Greasemonkey_Script/raw/master/QQ%E7%9B%B8%E5%86%8C%E5%A4%96%E9%93%BE%E5%B7%A5%E5%85%B7.user.js][3]
+
   [1]: https://www.yge.me
   [2]: https://github.com/xunni1000/Qzone-Photo-Outside/releases
+  [3]: https://github.com/xunni1000/Greasemonkey_Script/raw/master/QQ%E7%9B%B8%E5%86%8C%E5%A4%96%E9%93%BE%E5%B7%A5%E5%85%B7.user.js
+  
+
+
+
