@@ -86,7 +86,8 @@ var
   newurl :string;  //Í¼Æ¬µØÖ·
 
 const
-pattern = 'http\w?:\/\/.*?/psb\?\/(.*?)\/(.*?)\/\w\/(.*?)$' ;
+pattern = 'http\w?:\/\/.*?/ps(\w)\?\/(.*?)\/(.*?)\/\w\/(.*?)$' ;
+pattern2 = 'http\w?:\/\/.*?/psc\?\/(.*?)$' ;
 
 implementation
 
@@ -221,6 +222,7 @@ procedure TMain_Form.Test_URL;
 var
   match: TMatch;
   test_old_url:PwideChar;
+  test_new_url:bool; //ÐÂurl
 begin
 
   Memo_out.Text := '' ;  //¿Õ
@@ -235,15 +237,37 @@ begin
 
 
 
-
+  test_new_url:= false;
   match := TRegEx.Match(trim(Edit_old_src.Text), pattern);
+
+  if not match.Success  then
+  begin
+      test_new_url:= true;
+      match := TRegEx.Match(trim(Edit_old_src.Text), pattern2);
+  end;
+
+
 
 if  match.Success then
   begin
-    newurl :=   '//r.photo.store.qq.com/psb?/' +
-                match.Groups[1].Value  +  '/' +
-                match.Groups[2].Value  + '/r/'+
-                match.Groups[3].Value  + '_yake_qzoneimgout.png';
+
+    if  test_new_url then
+    begin
+      newurl :=   '//r.photo.store.qq.com/psc?/' +
+                  match.Groups[1].Value  +  '/r/' + '_yake_qzoneimgout.png';
+    end
+      else
+      begin
+        newurl :=   '//r.photo.store.qq.com/ps'+ match.Groups[1].Value + '?/' +
+                    match.Groups[2].Value  +  '/' +
+                    match.Groups[3].Value  + '/r/'+
+                    match.Groups[4].Value  + '_yake_qzoneimgout.png';
+      end;
+
+
+
+
+
     Err_Tips.Visible := false;
     get_Code;
   end

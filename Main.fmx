@@ -3,7 +3,7 @@ object Main_Form: TMain_Form
   Top = 0
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = Single
-  Caption = 'QQ'#30456#20876#22270#29255#22806#38142#24037#20855' V3 ('#25903#25345'HTTPS)'
+  Caption = 'QQ'#30456#20876#22270#29255#22806#38142#24037#20855' V4 ('#25903#25345'HTTPS)'
   ClientHeight = 408
   ClientWidth = 686
   Position = ScreenCenter
