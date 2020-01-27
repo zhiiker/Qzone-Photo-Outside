@@ -222,7 +222,7 @@ procedure TMain_Form.Test_URL;
 var
   match: TMatch;
   test_old_url:PwideChar;
-  test_new_url:bool; //ÐÂurl
+  test_new_url:Boolean; //ÐÂurl
 begin
 
   Memo_out.Text := '' ;  //¿Õ
