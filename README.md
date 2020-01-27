@@ -9,15 +9,15 @@ QQ空间相册图片外链工具
 
 **代码:**
 
-代码基于 Delphi XE2 (新版本支持linux 为Delphi 10.2) 编写. 无依赖库.直接下载即可编译.
+代码原始基于 Delphi XE2 (经过多版本迭代新版本支持linux 为Delphi 10.3.2) 编写. 无依赖库.直接下载即可编译.
 
-支持编译windows版和mac版,还有linux 64 (主要是ubuntu)
+
 
 **演示:**
 
 [https://www.yge.me][1]
 
-所有前台看到的图片都是使用这个工具
+所有我博客博文看到的图片都是使用这个工具外链的
 
 
 **下载(包含MAC/LINUX/WINDOWS):**
